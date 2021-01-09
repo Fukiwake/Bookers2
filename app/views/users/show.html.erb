@@ -1,18 +1,5 @@
-<h2>User info</h2>
-<%= attachment_image_tag @user, :profile_image, size: "100x100", format: "jpeg", fallback: "no_image.jpg" %>
-<table class="table">
-  <tbody>
-    <tr>
-      <th>name</th>
-      <th><%= @user.name %></th>
-    </tr>
-    <tr>
-      <th>introduction</th>
-      <th><%= @user.introduction %></th>
-    </tr>
-  </tbody>
-</table>
-<%= link_to "ユーザー編集", edit_user_path %>
+<%= render "users/show", user: @user %>
+<%= render "books/new", book: @book %>
 
 <h2>Books</h2>
   <table>
